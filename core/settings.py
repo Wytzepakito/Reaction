@@ -130,7 +130,8 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
 
 # Permissions:
@@ -175,3 +176,4 @@ SIMPLE_JWT = {
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
+
